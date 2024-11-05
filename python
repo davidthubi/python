@@ -1,0 +1,8 @@
+name = input("What is your name? ")
+age = input("What is your age? ")
+location = input("Where do you live? ")
+print(f"Hello {name}, you are {age} years old and live in {location}.")
+What is your name? David
+What is your age? 26
+Where do you live? Nairobi
+Hello David, you are 26 years old and live in Nairobi.
