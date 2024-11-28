@@ -1,0 +1,57 @@
+class Smartphone:
+    def __init__(self, brand, model, storage):
+        self.brand = brand
+        self.model = model
+        self.storage = storage
+    
+    def make_call(self, number):
+        print(f"Calling {number}...")
+    
+    def send_message(self, number, message):
+        print(f"Sending message to {number}: {message}")
+    
+    def display_details(self):
+        print(f"Smartphone Details:\nBrand: {self.brand}\nModel: {self.model}\nStorage: {self.storage}GB")
+
+class GamingPhone(Smartphone):
+    def __init__(self, brand, model, storage, gpu):
+        super().__init__(brand, model, storage)
+        self.gpu = gpu  
+    
+    def play_game(self, game):
+        print(f"Playing {game} with {self.gpu} GPU!")
+
+    def display_details(self):
+        super().display_details()
+        print(f"GPU: {self.gpu}")
+
+phone = Smartphone("Apple", "iPhone 14", 128)
+phone.display_details()
+phone.make_call("123-456-7890")
+phone.send_message("123-456-7890", "Hello, how are you?")
+
+print("\n--- Gaming Phone ---")
+gaming_phone = GamingPhone("Asus", "ROG Phone 5", 512, "Adreno 650")
+gaming_phone.display_details()
+gaming_phone.play_game("PUBG Mobile")
+
+class Vehicle:
+    def move(self):
+        print("The vehicle is moving.")
+
+class Car(Vehicle):
+    def move(self):
+        print("The car is driving 🚗.")
+
+class Plane(Vehicle):
+    def move(self):
+        print("The plane is flying ✈️.")
+
+class Boat(Vehicle):
+    def move(self):
+        print("The boat is sailing 🚤.")
+
+vehicles = [Car(), Plane(), Boat()]
+
+for vehicle in vehicles:
+    vehicle.move() 
